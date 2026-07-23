@@ -16,8 +16,8 @@ recomendaciones y pie de página.
 
 ## Enlaces
 
-- Sitio publicado: https://PENDIENTE.netlify.app
-- Repositorio: https://github.com/ErickGonzalezUMG/REPOSITORIO
+- Sitio publicado: https://9490-20-2571-hojatrabajo1.netlify.app
+- Repositorio: https://github.com/ErickGonzalezUMG/HojaTrabajo1
 - Rama: HojaTrabajo1
 
 ## Contenido del sitio
