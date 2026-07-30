@@ -13,7 +13,7 @@ diseño responsivo con media queries.
 
 ## Enlaces
 
-- Sitio publicado: https://PENDIENTE.netlify.app
+- Sitio publicado: https://9490-20-2571-hojatrabajo2.netlify.app
 - Repositorio: https://github.com/ErickGonzalezUMG/HojaTrabajo1
 - Rama: HojaTrabajo2
 
