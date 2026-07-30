@@ -1,13 +1,10 @@
-# Hoja de Trabajo 1 - Excursión a Semuc Champey
+# Hoja de Trabajo 2 - Excursión a Semuc Champey
 
 ## Descripción del proyecto
 
-Página web informativa desarrollada con HTML para promocionar una excursión a
-Semuc Champey, monumento natural ubicado en Lanquín, Alta Verapaz, Guatemala.
-
-La página incluye título, descripción del lugar, índice con enlaces internos,
-galería de imágenes, tabla de itinerario, lista de actividades adicionales,
-recomendaciones y pie de página.
+Mejora visual de la página web de la Hoja de Trabajo 1 mediante CSS externo.
+Se aplicaron estilos, transiciones, efectos hover, sombras, degradados y
+diseño responsivo con media queries.
 
 ## Estudiante
 
@@ -16,27 +13,40 @@ recomendaciones y pie de página.
 
 ## Enlaces
 
-- Sitio publicado: https://9490-20-2571-hojatrabajo1.netlify.app
+- Sitio publicado: https://PENDIENTE.netlify.app
 - Repositorio: https://github.com/ErickGonzalezUMG/HojaTrabajo1
-- Rama: HojaTrabajo1
+- Rama: HojaTrabajo2
 
-## Contenido del sitio
+## Mejoras aplicadas
 
-| Sección | Descripción |
+| Elemento | Mejora |
 |---|---|
-| Índice | Enlaces internos hacia cada sección de la página |
-| Descripción | Ubicación, características y atractivos del lugar |
-| Galería | Seis imágenes representativas del destino |
-| Itinerario | Tabla con día, fecha, hora, actividad y lugar |
-| Actividades | Lista de actividades adicionales al itinerario |
-| Recomendaciones | Qué llevar, clima y condición física requerida |
+| Tipografía | Fuente Poppins de Google Fonts |
+| Encabezado | Degradado linear-gradient, sombra box-shadow |
+| Secciones | Tarjetas blancas con sombra |
+| Índice | Borde izquierdo verde, links con transición al hacer hover |
+| Botón volver | Estilo tipo píldora con hover de color |
+| Galería | Fotos con escala y sombra al pasar el mouse (transform + transition) |
+| Tabla | Bordes desde CSS, hover en filas, encabezado con degradado |
+| Actividades | Ítem se desplaza y cambia color al hacer hover |
+| Recomendaciones | Términos con degradado, definiciones con borde izquierdo |
+| Pie de página | Degradado linear-gradient |
+| Responsivo | Media query para pantallas menores a 600px |
 
-## Imágenes
+## Selectores CSS usados
 
-Las imágenes provienen de Wikimedia Commons y se utilizan bajo licencias
-Creative Commons. La autoría y la licencia de cada una se indican en la
-sección de créditos de la página.
+| Tipo | Ejemplo |
+|---|---|
+| Por etiqueta | body, h2, a, hr, table |
+| Por ID | #encabezado, #indice, #pie |
+| Por clase | .foto, .actividad, .seccion |
+| Descendiente | #encabezado h1, #recomendaciones dt |
+| Pseudo-clase | a:hover, .foto:hover, .actividad:hover |
+| Media query | @media (max-width: 600px) |
 
-## Tecnología
+## Propiedades CSS usadas
 
-HTML únicamente. Sin CSS, sin frameworks y sin JavaScript.
+background, background: linear-gradient(), color, font-family, font-size,
+padding, margin, border, border-radius, border-left, box-shadow, text-align,
+display, width, transition, transform: scale(), list-style-position,
+border-collapse, overflow, text-decoration
