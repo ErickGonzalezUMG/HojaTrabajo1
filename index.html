@@ -5,6 +5,7 @@
     <title>Excursión a Semuc Champey</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -20,9 +21,12 @@
         <ol>
             <li><a href="#descripcion">Descripción del lugar</a></li>
             <li><a href="#galeria">Galería de imágenes</a></li>
+            <li><a href="#cotizacion">Cotiza tu excursión</a></li>
             <li><a href="#itinerario">Itinerario de la excursión</a></li>
             <li><a href="#actividades">Actividades adicionales</a></li>
             <li><a href="#recomendaciones">Recomendaciones</a></li>
+            <li><a href="#reservacion">Reservación</a></li>
+            <li><a href="#testimonios">Opiniones de visitantes</a></li>
         </ol>
     </div>
 
@@ -43,12 +47,6 @@
             debajo de esta formación y vuelve a salir al final del recorrido.
         </p>
         <p>
-            El área está rodeada de bosque subtropical y fue declarada monumento natural.
-            Cuenta con una gran riqueza ecológica: se han identificado más de cien especies
-            de aves, además de mamíferos, reptiles, anfibios y más de ciento veinte especies
-            de árboles.
-        </p>
-        <p>
             Entre sus atractivos principales están las pozas naturales, el mirador El Zapote
             y las cuevas de Kanbá. Muy cerca se encuentra el parque nacional Grutas de
             Lanquín, con el que comparte centro de visitantes.
@@ -60,36 +58,88 @@
 
     <div id="galeria" class="seccion">
         <h2>Galería de imágenes</h2>
+        <p>Haz clic sobre cualquier imagen para verla en tamaño grande.</p>
 
         <div class="galeria-fila">
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_natural_wonder.jpg?width=250" alt="Pozas de agua turquesa" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_natural_wonder.jpg?width=250" alt="Pozas de agua turquesa" width="250" data-descripcion="Formaciones naturales de piedra caliza que crean pozas escalonadas de color turquesa intenso.">
                 <p>Pozas de agua turquesa</p>
             </div>
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey,_Guatemala.jpg?width=250" alt="Vista general de las pozas escalonadas" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey,_Guatemala.jpg?width=250" alt="Vista general de las pozas escalonadas" width="250" data-descripcion="Panorámica de las pozas principales rodeadas de vegetación subtropical.">
                 <p>Vista general de las pozas</p>
             </div>
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cahabón_River,_Semuc_Champey,_Guatemala.jpg?width=250" alt="Río Cahabón" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cahabón_River,_Semuc_Champey,_Guatemala.jpg?width=250" alt="Río Cahabón" width="250" data-descripcion="El río Cahabón fluye bajo el puente natural de piedra caliza de Semuc Champey.">
                 <p>Río Cahabón</p>
             </div>
         </div>
 
         <div class="galeria-fila">
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_-_Rio_Cahabon_-_Guatemala.jpg?width=250" alt="Rápidos del río Cahabón" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_-_Rio_Cahabon_-_Guatemala.jpg?width=250" alt="Rápidos del río Cahabón" width="250" data-descripcion="Corrientes del río antes de sumergirse bajo la formación rocosa.">
                 <p>Rápidos del río Cahabón</p>
             </div>
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_Guatemala.JPG?width=250" alt="Puente natural de piedra caliza" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Semuc_Champey_Guatemala.JPG?width=250" alt="Puente natural de piedra caliza" width="250" data-descripcion="Estructura de 300 metros de largo que forma el atractivo principal del monumento.">
                 <p>Puente natural de piedra caliza</p>
             </div>
             <div class="foto">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista_aerea_de_Semuc_Champey_-_panoramio.jpg?width=250" alt="Vista aérea del monumento natural" width="250">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista_aerea_de_Semuc_Champey_-_panoramio.jpg?width=250" alt="Vista aérea del monumento natural" width="250" data-descripcion="Perspectiva desde las alturas que muestra la extensión completa de Semuc Champey.">
                 <p>Vista aérea del monumento</p>
             </div>
         </div>
+
+        <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
+    </div>
+
+    <!-- Modal para ver la imagen en grande -->
+    <div id="modal">
+        <div id="modal-contenido">
+            <span id="cerrar-modal">&times;</span>
+            <img id="modal-imagen" src="" alt="">
+            <p id="modal-titulo"></p>
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="cotizacion" class="seccion">
+        <h2>Cotiza tu excursión</h2>
+        <p>Completa los datos y calcula el precio estimado de tu visita.</p>
+
+        <p>
+            <label for="asistentes">Número de asistentes:</label><br>
+            <input type="number" id="asistentes" min="1" value="1">
+        </p>
+
+        <p>
+            <label for="paquete">Tipo de paquete:</label><br>
+            <select id="paquete">
+                <option value="basico">Básico (solo ingreso) - Q150 por persona</option>
+                <option value="completo">Completo (ingreso + guía) - Q250 por persona</option>
+                <option value="premium">Premium (todo incluido) - Q350 por persona</option>
+            </select>
+        </p>
+
+        <p>Servicios adicionales:</p>
+        <p>
+            <input type="checkbox" id="transporte">
+            <label for="transporte">Transporte incluido (+Q40 por persona)</label>
+        </p>
+        <p>
+            <input type="checkbox" id="alimentacion">
+            <label for="alimentacion">Alimentación (+Q60 por persona)</label>
+        </p>
+        <p>
+            <input type="checkbox" id="equipo">
+            <label for="equipo">Equipo para pozas (+Q25 por persona)</label>
+        </p>
+
+        <p><input type="button" id="btn-calcular" value="Calcular Total"></p>
+
+        <p id="resultado-cotizacion"></p>
 
         <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
     </div>
@@ -149,43 +199,29 @@
                     <td>2</td>
                     <td>16 de agosto</td>
                     <td>08:30</td>
+                    <td>Recorrido por las pozas escalonadas</td>
+                    <td>Semuc Champey</td>
+                </tr>
+                <tr class="dia-dos">
+                    <td>2</td>
+                    <td>16 de agosto</td>
+                    <td>12:00</td>
+                    <td>Almuerzo</td>
+                    <td>Semuc Champey</td>
+                </tr>
+                <tr class="dia-dos">
+                    <td>2</td>
+                    <td>16 de agosto</td>
+                    <td>14:00</td>
                     <td>Ascenso al mirador El Zapote</td>
                     <td>Semuc Champey</td>
                 </tr>
                 <tr class="dia-dos">
                     <td>2</td>
                     <td>16 de agosto</td>
-                    <td>11:00</td>
-                    <td>Baño en las pozas naturales</td>
-                    <td>Semuc Champey</td>
-                </tr>
-                <tr class="dia-dos">
-                    <td>2</td>
-                    <td>16 de agosto</td>
-                    <td>15:00</td>
-                    <td>Recorrido por las cuevas</td>
-                    <td>Cuevas de Kanbá</td>
-                </tr>
-                <tr class="dia-tres">
-                    <td>3</td>
-                    <td>17 de agosto</td>
-                    <td>08:00</td>
-                    <td>Descenso en tubo por el río</td>
-                    <td>Río Cahabón</td>
-                </tr>
-                <tr class="dia-tres">
-                    <td>3</td>
-                    <td>17 de agosto</td>
-                    <td>12:00</td>
-                    <td>Almuerzo de despedida</td>
+                    <td>17:00</td>
+                    <td>Regreso al hospedaje</td>
                     <td>Lanquín</td>
-                </tr>
-                <tr class="dia-tres">
-                    <td>3</td>
-                    <td>17 de agosto</td>
-                    <td>14:00</td>
-                    <td>Retorno</td>
-                    <td>Ciudad de Guatemala</td>
                 </tr>
             </tbody>
         </table>
@@ -197,17 +233,23 @@
 
     <div id="actividades" class="seccion">
         <h2>Actividades adicionales</h2>
-        <p>Actividades que se pueden realizar por cuenta propia, además de las incluidas en el itinerario:</p>
-        <ol>
-            <li class="actividad">Rápel en las paredes del cañón</li>
-            <li class="actividad">Observación de aves al amanecer</li>
-            <li class="actividad">Visita al mercado de artesanías de Lanquín</li>
-            <li class="actividad">Recorrido por una finca de cardamomo</li>
-            <li class="actividad">Caminata nocturna guiada por el bosque</li>
-            <li class="actividad">Fotografía de paisaje desde el mirador</li>
-            <li class="actividad">Natación en las pozas bajas del río</li>
-            <li class="actividad">Visita a las Grutas de Lanquín</li>
+
+        <p>
+            <label for="buscador-actividades">Buscar actividad:</label><br>
+            <input type="text" id="buscador-actividades" placeholder="Escribe para filtrar...">
+        </p>
+
+        <ol id="lista-actividades">
+            <li>Rapel en las paredes del cañón</li>
+            <li>Observación de aves al amanecer</li>
+            <li>Visita al mercado de artesanías de Lanquín</li>
+            <li>Recorrido por una finca de cardamomo</li>
+            <li>Caminata nocturna guiada por el bosque</li>
+            <li>Fotografía de paisaje desde el mirador</li>
+            <li>Nado en las pozas bajas del río</li>
+            <li>Visita a la cueva de los murciélagos en Lanquín</li>
         </ol>
+
         <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
     </div>
 
@@ -219,14 +261,51 @@
             <dt>Qué llevar</dt>
             <dd>Zapatos con buen agarre, traje de baño, toalla, repelente y bloqueador solar.</dd>
             <dt>Efectivo</dt>
-            <dd>En la zona hay poca señal telefónica y casi ningún negocio acepta tarjeta.</dd>
+            <dd>En la zona hay poca señal y casi ningún negocio acepta tarjeta.</dd>
             <dt>Clima</dt>
             <dd>Cálido y húmedo, con lluvias frecuentes entre mayo y octubre.</dd>
             <dt>Condición física</dt>
             <dd>El ascenso al mirador toma cerca de 45 minutos por gradas de tierra.</dd>
-            <dt>Precaución</dt>
-            <dd>No acercarse al punto donde el río entra a la caverna, por la fuerza de la corriente.</dd>
         </dl>
+        <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
+    </div>
+
+    <hr>
+
+    <div id="reservacion" class="seccion">
+        <h2>Reservación / Contacto</h2>
+        <p>Déjanos tus datos y te contactaremos para confirmar tu excursión.</p>
+
+        <form id="form-reservacion">
+            <p>
+                <label for="nombre-reserva">Nombre completo:</label><br>
+                <input type="text" id="nombre-reserva">
+            </p>
+            <p>
+                <label for="personas-reserva">Número de personas:</label><br>
+                <input type="number" id="personas-reserva" min="1">
+            </p>
+            <p>
+                <label for="correo-reserva">Correo electrónico:</label><br>
+                <input type="text" id="correo-reserva">
+            </p>
+            <p><input type="submit" value="Enviar solicitud"></p>
+        </form>
+
+        <p id="confirmacion"></p>
+
+        <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
+    </div>
+
+    <hr>
+
+    <div id="testimonios" class="seccion">
+        <h2>Opiniones de nuestros visitantes</h2>
+
+        <div id="caja-testimonio"></div>
+
+        <p><input type="button" id="btn-testimonio" value="Ver otra opinión"></p>
+
         <p><a href="#indice" class="volver">&#8593; Volver al índice</a></p>
     </div>
 
