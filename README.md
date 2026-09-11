@@ -30,7 +30,7 @@ independiente.
 
 ## Enlaces
 
-- Sitio publicado: 9490-20-2571-hojatrabajo4.netlify.app
+- Sitio publicado: https://9490-20-2571-hojatrabajo4.netlify.app
 - Repositorio: https://github.com/ErickGonzalezUMG/HojaTrabajo1
 - Rama: HojaTrabajo4
 
