@@ -1,0 +1,397 @@
+/* ============================================
+   ESTILOS GLOBALES
+   ============================================ */
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f8f1;
+  color: #212121;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #1b5e20;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ============================================
+   ENCABEZADO
+   ============================================ */
+.encabezado {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.encabezado h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.encabezado p {
+  font-size: 1.2em;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+.pie-pagina {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.pie-pagina p {
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.modal-contenido img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+.cerrar-modal {
+  display: block;
+  text-align: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-bottom: 8px;
+  color: #b71c1c;
+}
+/* ============================================
+   GALERÍA
+   ============================================ */
+.galeria {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.galeria-fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.galeria-item {
+  width: calc(33.33% - 12px);
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.galeria-item p {
+  background-color: #e8f5e9;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #1b5e20;
+}
+/* ============================================
+   COTIZADOR DE PRESUPUESTO
+   ============================================ */
+.cotizador {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+}
+
+.cotizador label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.cotizador input,
+.cotizador select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  background-color: white;
+}
+
+.cotizador input:focus,
+.cotizador select:focus {
+  outline: none;
+  border-color: #43a047;
+}
+
+.checkbox-grupo {
+  margin-bottom: 16px;
+}
+
+.checkbox-grupo label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-grupo input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+.total-presupuesto {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-top: 10px;
+}
+/* ============================================
+   FILTRO DE ACTIVIDADES
+   ============================================ */
+.filtro-actividades {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.filtro-actividades input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.filtro-actividades input:focus {
+  outline: none;
+  border-color: #43a047;
+}
+
+.lista-actividades {
+  list-style: none;
+}
+
+.lista-actividades li {
+  background-color: #e8f5e9;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-left: 4px solid #43a047;
+  transition: background-color 0.2s;
+}
+
+.lista-actividades li:hover {
+  background-color: #c8e6c9;
+}
+/* ============================================
+   FORMULARIO DE RESERVACIÓN
+   ============================================ */
+.formulario-reservacion {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-reservacion label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.formulario-reservacion input,
+.formulario-reservacion select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+.formulario-reservacion input:focus,
+.formulario-reservacion select:focus {
+  outline: none;
+  border-color: #43a047;
+}
+
+.formulario-reservacion button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-reservacion button:hover {
+  background-color: #2e7d32;
+}
+
+.mensaje-confirmacion {
+  background-color: #e8f5e9;
+  border-left: 4px solid #43a047;
+  padding: 12px 16px;
+  margin-top: 16px;
+  border-radius: 0 8px 8px 0;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+.mensaje-error {
+  background-color: #ffebee;
+  border-left: 4px solid #b71c1c;
+  padding: 12px 16px;
+  margin-top: 16px;
+  border-radius: 0 8px 8px 0;
+  color: #b71c1c;
+  font-weight: 600;
+}
+/* ============================================
+   TESTIMONIOS
+   ============================================ */
+.testimonios {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonio-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonio-texto {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #388e3c;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.testimonio-nombre {
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.testimonios button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.testimonios button:hover {
+  background-color: #2e7d32;
+}
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 768px) {
+  .encabezado h1 {
+    font-size: 1.8em;
+  }
+
+  .galeria-item {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-item {
+    width: 100%;
+  }
+
+  .cotizador,
+  .formulario-reservacion {
+    padding: 20px 16px;
+  }
+}
